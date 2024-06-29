@@ -19,11 +19,11 @@ print("Remember, you are allowed 15 guesses in total.")
 #Optional: make sure that both lower and upper case letters are acceptable and treated as equivalent
 user_word <- readline(prompt = "Ready? Stready? GO! Input one character that may be in the secret word:")
 
-#if((grep("[A-Za-z]", user_word) > 1) | nchar(user_word) > 1) { #first check if numeric.pos is NA (i.e. non numerical value), then that it does not have more than three digits and that it is not a negativie number
-#  print(paste("ERROR:", user_word,"is not a valid character.")) #if numeric.pos is NA, more than three digits and negative, print error and quit)
-#} else {
-#  input <- user_word
-#}
+if((grep("[A-Za-z]", user_word) > 1) | nchar(user_word) > 1) { # If user_word is not a letter OR user_word is greater than length 1
+  print(paste("ERROR:", user_word,"is not a valid character.")) # print error message
+} else { #otherwise
+  input <- user_word #assign user_input variable to new variable input for downstream use
+}
 
 #Check to see if the user input is in the secret word.
 #If yes, notify user and ask for next letter
