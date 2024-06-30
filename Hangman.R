@@ -1,7 +1,7 @@
 #'Prepare a dictionary of words to choose from and save it in a txt file (one column) and save it in the project directory
-# Created Dictionary.txt file with names of animals/birds from A-Z
+# Manually created Dictionary.txt file with names of animals/birds from A-Z
 
-# hangman function
+# build hangman function
 hangman <- function() {
   #list of words from txt file, convert it to matrix so each word is indexable
   list <- as.matrix(read.table("/Users/mausamvk/Assignment_3/Dictionary"))
@@ -9,9 +9,9 @@ hangman <- function() {
   secret_word <- sample(list, 1)
   
   #variables 
-  guesses <- character(0)
-  attempts <- 10
-  game_over <- FALSE
+  guesses <- character(0) #keep track of guesses from user
+  attempts <- 10 #total attempts allowed = 10
+  game_over <- FALSE #set game_over to FALSE, until conditions are met for game_over
   
   #create a function to show word, based on if letter guessed is in the secret word
   show_word <- function(secret_word, guesses) {
@@ -48,7 +48,7 @@ hangman <- function() {
     cat("\n------------------------------") #formatting to look nice
     cat("\n") #space
     cat("\n||||||||||||||||||||||||||||||")
-    cat("\nLength of Secret Word:", nchar(secret_word))
+    cat("\nLength of Secret Word (Hint: it's an animal):", nchar(secret_word))
     cat("\nAttempts remaining:", attempts) 
     cat("\nGuessed letters:", guesses)
     cat("\nCurrent Word:", show_word(secret_word, guesses))
