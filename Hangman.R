@@ -48,7 +48,7 @@ hangman <- function() {
     cat("\n------------------------------") #formatting to look nice
     cat("\n") #space
     cat("\n||||||||||||||||||||||||||||||")
-    cat("\nLength of Secret Word (Hint: it's an animal):", nchar(secret_word))
+    cat("\nLength of Secret Word (Hint: it's an animal/bird):", nchar(secret_word))
     cat("\nAttempts remaining:", attempts) 
     cat("\nGuessed letters:", guesses)
     cat("\nCurrent Word:", show_word(secret_word, guesses))
