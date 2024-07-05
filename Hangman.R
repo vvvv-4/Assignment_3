@@ -51,7 +51,7 @@
 # build hangman function
 hangman <- function() {
   #list of words from txt file, convert it to matrix so each word is indexable
-  list <- as.matrix(read.table("/Users/mausamvk/Assignment_3/Dictionary"))
+  list <- as.matrix(read.table("/Users/vv/Library/CloudStorage/OneDrive-UniversityofToronto/Summer 2024/BTC1855/Assignment_3Review/Dictionary"))
   #randomly select from the list
   secret_word <- sample(list, 1)
   
@@ -128,3 +128,9 @@ hangman <- function() {
 }
 
 hangman() #call hangman function to run the game
+
+#####################################
+#Code Review from Mingwei 
+#Your plan is very elaborate and I like how you decided what you want your script to do before execution. 
+#The show_word function is smart. I didnt use a loop when trying to displaying my words which made things a bit difficult. 
+#
