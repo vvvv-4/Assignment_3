@@ -131,6 +131,17 @@ hangman() #call hangman function to run the game
 
 #####################################
 #Code Review from Mingwei 
+
 #Your plan is very elaborate and I like how you decided what you want your script to do before execution. 
-#The show_word function is smart. I didnt use a loop when trying to displaying my words which made things a bit difficult. 
-#
+#The show_word function is smart. I didn't use a loop when trying to displaying my words which made things a bit difficult. 
+#When looking through your code I found that imputs are case-specific. 
+#When guessing the word and letters, capitalized letters are not considered correct. 
+#Consider using grepl and ignore.case = True to consider guess that are capitalized 
+
+#Line 94, the little display panel shows the words and I thought it is a thoughtful design. 
+#Also you give a message to inform players that certain guesses has already been made and I liked that as well. 
+
+#Overall very nice!!!! 
+
+
+
